@@ -1,0 +1,40 @@
+aggregate		使聚集，总计的，合计
+cellular		细胞的，蜂窝状的，多孔的
+chunk			块，相当大的一部分
+compete			竞争
+congestion		拥塞
+consistency		一致性
+decompose		分解，腐烂
+degradation		恶化
+determinant		决定因素，行列式，决定因素的
+dominate		主导
+engage			聘用，从事
+engagement		雇佣，约会，订婚，契约
+eventual		最终的
+exponential		指数
+heterogeneous	各种各样的
+hyper			超，亢奋的
+idle			虚度，空闲的
+implication		含义，启示
+insight			洞察
+lean			倾斜，倾向于	lean towards 倾向于
+leverage		举债经营，接待收购，杠杆作用，影响力
+majority		大多数
+novel			新的，新奇的
+omit			省略，遗漏
+overage			过老的，超时的
+overhead		开销，天花板
+present			提出
+proxy			代理
+remarkably		明显地，非常地
+replica			复制品
+replicate		复制
+representative	代表，有代表性的
+retrieve		检索，取回
+roughly			大致上，粗略的
+significant		重要的，有意义的
+transmission	传输，传送
+transparently	明显的，易察觉的
+vast			巨大的
+
+

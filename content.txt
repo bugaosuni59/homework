@@ -1,0 +1,450 @@
+进度等级划分：
+	读了标题：		1
+	读了概要：		2
+	大致通读：		3
+	通读理解：		4
+	融会贯通：		5
+
+下一步精读：
+	不同网盘的同步策略和问题：25
+	视频重复率计算：34
+	调光省电算法：35，44，47
+	手机检测磁性门：36
+	用哈希改进OpenStack Swift同步协议：42
+	降低CDN尾部延时的算法：43
+	
+	
+文献进度：
+2018：
+73.		1
+71.     1
+69.     1
+68.     1
+67.     1
+66.     1
+65.     1
+64.     1
+63.     1
+62.     1
+2017：  
+61.     1
+60.     1
+59.     1
+58.     1
+57.     1
+56.     1
+55.     1
+54.     1
+53.     1
+52.     1
+51.     1
+50.     1
+49.     1
+2016：  
+47.     2
+46.     2
+45.     2
+44.     2
+43.     2
+42.     2
+41.     2
+2015：  
+40.     2
+39.     2
+38.     2
+37.     2
+36.     2
+35.     2
+34.     2
+33.     2
+2014：  
+32.     2
+31.		2
+30.		4
+2013：
+29.     2
+28.     2
+27.     2
+25.     2
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+概念：
+NFC：
+	Near Field Communication 近场通信、近距离无线通信
+	诞生于2003年，由飞利浦和索尼这两个移动设备巨头联合研发
+	NFC是一种短距离的高频无线通信技术，允许电子设备之间进行非接触式点对点数据传输。
+RFID：
+	Radio Frequency Identification，即射频识别，又名电子标签。
+
+DNSSec:
+	Domain Name System Security Extensions
+	DNS安全扩展
+	
+OpenStack:
+	是一个开源的云计算管理平台项目
+
+基站：
+	公用移动通信基站，是指在一定的无线电覆盖区中，通过移动通信交换中心，与移动电话终端之间进行信息传递的无线电收发信电台
+
+DeltaSync：
+
+ISP:
+
+H2:
+
+NFV:
+	Network Function Virtualization
+	网络功能虚拟化
+	
+SDN:
+	Software Defined Network
+	软件定义网络
+
+Data Plane:
+	数据平面，数据面板，数据平台
+
+NFS:
+	Network File System
+	网络文件系统，是FreeBSD支持的文件系统的一种
+	
+	
+IoT:
+	Internet of Things 物联网
+
+Spam:
+	垃圾邮件
+	
+	
+AFC:
+	Automatic Fare Collection System
+	自动收费站系统
+
+CDN:
+	Content Delivery Network
+	内容分发网络
+	其基本思路是尽可能避开互联网上有可能影响数据传输速度和稳定性的瓶颈和环节，
+	使内容传输的更快、更稳定。
+	通过在网络各处放置节点服务器所构成的在现有的互联网基础之上的一层智能虚拟网络，
+	CDN系统能够实时地根据网络流量和各节点的连接、
+	负载状况以及到用户的距离和响应时间等综合信息将用户的请求重新导向离用户最近的服务节点上。
+	其目的是使用户可就近取得所需内容，解决 Internet网络拥挤的状况，提高用户访问网站的响应速度。
+
+Cellular Traffic:
+	https://en.wikipedia.org/wiki/Cellular_traffic
+	蜂窝流量的重要方面包括：服务质量目标，流量容量和小区大小，
+	频谱效率和扇区化，流量容量与覆盖范围以及信道保持时间分析。
+	Important aspects of cellular traffic include: quality of service targets, 
+	traffic capacity and cell size, spectral efficiency and sectorization, 
+	traffic capacity versus coverage, and channel holding time analysis.
+
+云存储服务:
+	俗称网盘
+	国外代表性云存储服务包括Dropbox、One Drive、Google Drive、iCloud Drive、SugarSync、Ubuntu One
+	国内：金山快盘、360云盘、百度网盘、115网盘、新浪微盘、阿里酷盘
+	Dropbox拥有超过3亿用户，日军新增和更新文件达到数十亿个
+	引自论文30
+
+Merkle Tree:
+	默尔克树，也叫哈希树
+
+2018：
+73.Pricing Data Tampering in Automated Fare Collection with NFC-equipped Smartphones
+价格数据篡改 自动收费站 NFC手机
+关联52
+
+71.Look-aside At Your Own Rist:Privacy Implications of DNSSEC Look-aside Validation
+旁观 个人风险 牵涉到的隐私 DNS安全扩展
+
+69.On the Synchronization Bottleneck of OpenStack Swift-Like Cloud Storage Systems
+OpenStack快速云存储系统同步瓶颈 
+关联42
+
+68.H2Cloud:Maintaining the Whole Filesystem in an Object Storage Cloud
+H2Cloud：在对象存储云中维护整个文件系统
+
+67.On the Effectiveness of Offset Projections for 360-Degree Video Streaming
+360度视频流 有效的偏移预测/投影
+关联55
+
+66.Profiling the Performance Anomalies of Multi-Source Media Downloading at Scale in the Wild
+野外多源媒体下载性能异常分析
+
+65.FBSleuth:Fake Base Station Forensics via Radio Frequency Fingerprinting
+通过射频指纹搞的伪基站取证
+	
+64.Mobile Content Hosting Infrastructure in China:A View from a Cellular ISP
+从Cellular ISP看中国移动内容托管基础设施
+
+63.Towards Web-based Delta Synchronization for Cloud Storage Services
+面向基于Web的增量同步 for 云存储服务
+关联56，54，31，29
+
+62.Enabling Efficient Cross-Cloud File Collaboration Based on Inefficient Web APIs
+用低效的Web API来实现云文件协作
+感觉关联多人在线编辑石墨文档
+关联53
+	
+	
+2017：
+61.Accessing Google Scholar under Extreme Internet Censorship:A Legal Avenue
+用合法途径 在一个严格的网络审查环境下 访问Google Scholar
+
+60.Unveiling Performance of NFV Software Dataplanes
+揭幕性能  NFV(网络功能虚拟化)软件 数据平面
+
+59.An IoT Honeypot Device for Malware Forensics
+一个物联网蜜罐设备 为恶意软件取证用的
+
+58.Resisting Tag Spam by Leveraging Implicit User Behaviors
+利用隐式用户行为 抵制带标签的垃圾邮件 
+
+57.Unbiased Sampling of Social Media Networks for Well-connected Subgraphs
+无偏抽样 社交媒体网络 连通子图
+
+56.Practical Web-based Delta Synchronization for Cloud Storage Services
+实用的 基于Web的增量同步 for 云存储服务
+关联63，54，31，29
+
+55.A Measurement Study of Oculus 360 Degree Video Streaming
+一个测量评估的研究 关于眼环360度视频流
+关联67
+
+54.DeltaCFS: Boosting Delta Sync for Cloud Storage Services by Learning from NFS
+增量云文件系统：通过NFS文件系统中学习 提高云存储服务的增量同步
+关联63，56，31，29
+
+53.CoCloud: Enabling Efficient Cross-Cloud File Collaboration based on Inefficient Web APIs
+合作云：用低效的Web API来实现云文件协作
+关联62
+
+52.Large-Scale Invisible Attack on AFC Systems with NFC-Equipped Smartphones
+大规模不可见攻击 AFC自动收费站系统 有NFC设备的手机
+关联73
+
+51.NFC-enabled Attack on Cyber Physical Systems: A Practical Case Study
+对一个物理电子网络系统的NFC攻击 一个实际案例的研究
+
+50.Montage: Combine Frames with Movement Continuity for Realtime Multi-User Tracking
+镜头组接：将帧 与连续动作结合 实时多用户跟踪
+
+49.FBS-Radar: Uncovering Fake Base Stations at Scale in the Wild
+FBS雷达：发现大量野外的伪基站
+
+2016：
+
+47.Content-Adaptive Display Power Saving for Internet Video Applications on Mobile Devices
+移动设备 网络视频应用 内容自适应展示 省电
+关联44 35
+内容：
+	GPU+DP+贪心背光缩放
+
+46.An Empirical Analysis of a Large-scale Mobile Cloud Storage Service
+大规模移动云存储服务的 一个经验分析（实证分析）
+内容：
+	疑问：traditional cloud storage VS mobile cloud storage?这俩有啥区别？
+	3.5亿http请求日志数据集
+	delta encoding and chunk-level deduplication found in traditional cloud storage services can be reasonably omitted in mobile scenarios
+	观察到客户端块数据传输很慢，空闲时间应该缩短
+
+
+45.On the Performance of Cloud Storage Applications with Global Measurement
+基于全局评估的 云存储应用性能研究
+内容：
+	现在市场上有Consumer Cloud Storage(CCS) Restful WebAPI可以用
+	但是它们的性能不可见
+	分析了五个CCS提供商的性能差异、限制、瓶颈
+	分析其WebAPI底层设计，提供了优化API性能、改进第三方应用的指导
+
+
+44.GoCAD: GPU-Assisted Online Content-Adaptive Display Power Saving for Mobile Devices in Internet Streaming
+基于移动设备GPU的网络流媒体内容自适应，省电
+关联47 35
+内容：
+	GPU+CAD算法，用了DP思想，
+	利用了video storyboard，是一个提前计算好的视频相关缩略图
+	用了460个视频测量
+
+43.TailCutter: Wisely Cutting Tail Latency in Cloud CDN under Cost Constraints
+在成本约束下 聪明地砍掉云CDN的尾部延时
+	分析CDN中783944个用户，识别高尾延迟问题
+	提出Maximum Tail Minimization Algorithm(MTMA)算法进行优化，效果明显
+	
+
+42.On the Synchronization Bottleneck of OpenStack Swift-Like Cloud Storage Systems
+OpenStack快速云存储系统同步瓶颈 
+关联69
+内容：
+	研究Openstack Swift对象同步协议
+	提出轻量级对象同步协议LightSync
+	提出了两种哈希思路，使用了哈希树
+	
+
+41.Exploring Cross-Application Cellular Traffic Optimization with Baidu TrafficGuard
+用百度流量监控器探索交叉应用蜂窝流量优化
+内容：
+	联网小设备越来越多，为了优化拥堵
+	百度Traffic Guard，是一个代理
+	使用网络层VPN减少cellular traffic
+	讨论了大规模cellular traffic分析报告
+	部署一年来的优化技术经验
+
+2015：
+40.Towards Cost-Effective Cloud Downloading with Tencent Big Data
+基于腾讯大数据的 面向成本效益的云下载
+内容：
+	基于QQ旋风的大量数据，讨论以下内容的设计权衡：
+	1.如何规划云缓存容量，从而达到不错的缓存命中率
+	2.如何加速云到大量用户的数据分发
+	3.如何应对热门文件的密集的用户请求
+	4.如何判断潜在的下载失败情况
+
+39.Offline Downloading in China: A Comparative Study
+中国的离线下载：一个比较研究
+内容：
+	调研两种离线下载实现方法：
+		cloud-based approach
+		smart AP(access point)based approach
+	有性能瓶颈
+	提出Offline Downloading Redirector ODR中间件
+	帮助摆脱性能瓶颈
+	
+
+38.CHARM: A Cost-Efficient Multi-Cloud Data Hosting Scheme with High Availability
+一种高可用性的 成本效益不错的 多功能云数据托管方案
+内容：
+	综合分析各种现有云供应商
+	提出了一种新的数据托管方案CHARM
+	它集成了所需的两个关键功能。
+	第一种方法是选择几个合适的云和适当的冗余策略，以最小的金钱成本和保证的可用性来存储数据。
+	二是根据数据访问模式的变化和云的定价，触发数据重分发的过渡过程。
+	
+
+37.Do Twin Clouds Make Smoothness for Transoceanic Video Telephony?
+双子云确实能使 跨洋可视电话更流畅 吗？
+内容：
+	微信跨洋视频电话使用了双子云技术，很厉害	
+	优点：减少往返延迟、中继跳数、分组丢包率
+	缺点：双子云较复杂，视频启动时间长，成本有些高
+	结论：双子云很好，但也有优化余地
+
+36.LMDD: Light-weight Magnetic-based Door Detection with Your Smartphone
+轻量级 磁性门监测 智能手机
+内容：
+	门是室内定位的重要标志，检测门很重要，
+	最先进的方案是用CV或基础设施，但是太难了，设备管理成本高
+	提出仅依赖智能手机内置传感器信息的轻量级磁门检测方法LMDD
+	原理是分析磁信号的变化来检测门，
+	实现后平均准确率74%
+
+
+35.Content-Adaptive Display Power Saving in Internet Mobile Streaming
+移动互联网流数据 自适应展示 省电
+关联47 44
+内容：
+	基于Backlight scaling背光缩放技术
+	传统方法用CPU实时算每一帧的亮度，太耗能
+	Content-Adaptive Display(CAD)，使用GPU
+	用DP计算背光缩放时间
+	选取了470个youtube视频，测量省电效果良好
+
+
+34.A Quantitative Study of Video Duplicate Levels in Youtube
+Youtube上视频复制级别的 一个定量研究
+内容：
+用了一种方法检查了youtube上的视频重复率，计算了存储空间浪费率
+
+
+33.Accurate DNS query characteristics estimation via active probing
+基于主动探测的 精确DNS查询特征估计
+内容：
+passive capturing technique有限制：过大的管理开销、过多隐私问题
+active probing没有这些限制
+提出了一种新方案，可以trace DNS behavir，评估DNS特征，这种方案很好，开销小，隐私问题少
+基于DNS cache activities
+
+2014：
+32.PACOM: Parasitic anoymous communication in the BitTorrent network
+BT网络的寄生通信
+内容：
+	解决的问题：匿名用户匿名性受到影响，有系统通过中间结点转换消息mark用户，也有流量分析算法
+	提出寄生匿名通信系统PACOM，每个PACOM客户机都寄生在BitTorrent网络中，
+	BT网络能隐藏通信路径，PACOM相邻通信链路的流量模式是统计独立的，所以能抵抗流量分析攻击
+
+
+
+31.Towards Network-level Efficiency for Cloud Storage Services
+面向云存储服务的网络级效益
+关联63，56，54，29
+内容：
+	定义TUE：Traffic Usage Efficiency of data synchronization
+	核心内容：当今数据同步很浪费，可以通过合理的机制被很好的避免或减少
+
+
+
+30.云存储价格战背后的科研损失
+
+
+
+2013：
+
+29.Efficient Batched Synchronization in Dropbox-like Cloud Storage Services
+Dropbox类的 云存储服务有效分批同步
+关联63，56，54，31
+内容：
+	Cloud storage applications generate session maintenance traffic that far exceeds the useful update traffic
+	存在 Traffic Overuse Problem
+	提出 Update-batched Delayed Synchronization(UDS)机制
+	扩展了UDS，向下兼容Linux kernel modification
+
+28.T-CloudDisk: A Tunable Cloud Storage Service for Flexible Batched Synchronization
+清云网盘：一个隧道云存储服务 for 弹性批量同步
+内容：
+	为研究Traffic Overuse Problem，实现了清云网盘
+
+27.Challenges, Designs and Performances of Large-Scale Open-P2SP Content Distribution
+大规模开放式-P2SP内容分发的 挑战，设计和性能
+内容：
+	server-based -> p2p -> p2sp -> open-p2sp
+	以QQ旋风为例研究open-P2SP
+
+
+
+25.Coarse-Grained Cloud Synchronization Mechanism Design May Lead to Severe Traffic Overuse
+粗粒度的/粗糙的 云同步机制设计可能导致严重的Traffic Overuse
+内容：
+	分析了不同云盘的不同机制
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
