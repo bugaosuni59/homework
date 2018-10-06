@@ -12,6 +12,7 @@
 	手机检测磁性门：36
 	用哈希改进OpenStack Swift同步协议：42
 	降低CDN尾部延时的算法：43
+	DevOps(Paas)的本质、现状和前景：48
 	
 	
 文献进度：
@@ -40,6 +41,7 @@
 51.     1
 50.     1
 49.     1
+48.		2
 2016：  
 47.     2
 46.     2
@@ -164,6 +166,12 @@ Cellular Traffic:
 Merkle Tree:
 	默尔克树，也叫哈希树
 
+DevOps:
+	Development和Operations的组合词
+	是一组过程、方法与系统的统称，
+	用于促进开发（应用程序/软件工程）、技术运营和质量保障（QA）部门之间的沟通、协作与整合
+	
+	
 2018：
 73.Pricing Data Tampering in Automated Fare Collection with NFC-equipped Smartphones
 价格数据篡改 自动收费站 NFC手机
@@ -246,6 +254,15 @@ H2Cloud：在对象存储云中维护整个文件系统
 
 49.FBS-Radar: Uncovering Fake Base Stations at Scale in the Wild
 FBS雷达：发现大量野外的伪基站
+
+48.Towards a Full-Stack DevOps Environment(Platform-as-a-Service) for Cloud-Hosted Applications
+面向云托管应用的全站DevOop环境（PaaS）
+内容：
+	全面地研究了跨云计算DevOps堆栈的各个层的最新PaaS解决方案
+	Identify areas of consensus and diversity 
+	In addition, we explore cutting-edge solutions towards realizing a more fine-grained, full-stack DevOps environment.
+	探索尖端的解决方案，以实现更细粒度，全堆栈DEVOP环境
+	本文方便读者快速了解PaaS的本质、现状和未来发展前景
 
 2016：
 

@@ -36,5 +36,5 @@ significant		重要的，有意义的
 transmission	传输，传送
 transparently	明显的，易察觉的
 vast			巨大的
-
+compound 		复合物
 
