@@ -2,6 +2,7 @@ aggregate		使聚集，总计的，合计
 cellular		细胞的，蜂窝状的，多孔的
 chunk			块，相当大的一部分
 compete			竞争
+compound 		复合物
 congestion		拥塞
 consistency		一致性
 decompose		分解，腐烂
@@ -36,5 +37,65 @@ significant		重要的，有意义的
 transmission	传输，传送
 transparently	明显的，易察觉的
 vast			巨大的
-compound 		复合物
-
+crucial 		关键的，重要的，要害的
+sponsor			赞助
+constitute		构成
+transceiver		收发器
+vulnerability	漏洞
+spam			垃圾邮件
+fraud			欺诈
+crowdsourced	众包的
+authority		权威，当权者
+temporal		时间的
+spatial			空间的
+constraint		约束
+suite			一套		a suite of
+surmount		克服，超越
+threat			威胁
+eavesdropping	窃听
+relay attack	中继攻击
+relay			继电器，转播
+proliferation	增殖
+immersiveness 	沉浸感
+manipulate 		操纵
+adoption 		采用
+adopt 			采用
+hinder			阻碍		is hindered by 受阻于
+oculus			眼环
+distorted		扭曲的
+spherical		球形的
+burden 			包袱，负担
+stem			遏制，封堵	
+outpace			超越
+magnitude		量级
+simultaneously 	同时地
+vulnerable		易受攻击的
+adversary		对手
+conduct			实施
+fraction 		分数，一小部分
+annotations		注释
+implicit 		无疑问的
+reputation 		信誉，名望
+leverage		促使
+clique			小圈子，派系
+academia 		学术界
+latency			等待时间，延迟
+commodity 		日用品，商品
+incidentally 	附带
+censorship 		审查制度
+machinery		机关，组织
+ecosystem		生态系统
+disparity		差距，不一致
+passive			被动的
+investigation 	调查研究，科学研究
+reveal			揭示了
+contrary		相反的，反对的		on the contrary 相反
+monopoly		垄断，垄断者
+fundamental		基本的
+pervasive 		普遍的，无处不在的
+empirical		凭经验的，经验主义的
+quantitatively	定量地
+anomaly			异常现象，异常
+manifold		多种多样的
+regard 			涉及，认为，留意
+intuitive 		直觉的，直观的

@@ -10,37 +10,49 @@
 	视频重复率计算：34
 	调光省电算法：35，44，47
 	手机检测磁性门：36
-	用哈希改进OpenStack Swift同步协议：42
+	用哈希改进OpenStack Swift同步协议，实现LightSync：42，69
 	降低CDN尾部延时的算法：43
 	DevOps(Paas)的本质、现状和前景：48
+	Montage用户追踪算法：50（有点难……）
+	对基于NFC的AFC进行攻击：51，52，73
+	跨云协作：53
+	360度视频流：55，67
+	增量同步相关：64，56，54，31，29 其中56是JS实现
+	社交网络数据采样算法：57
+	抵抗垃圾标签：58
+	软件物联网蜜罐：59
+	内容托管基础建设、Cellular ISP：64（不太懂）
+	FBS雷达：49，FBS指纹：65
+	H2Cloud目录结构的对象云存储，H2哈希：68
+	
 	
 	
 文献进度：
 2018：
-73.		1
+73.		2
 71.     1
 69.     1
 68.     1
-67.     1
+67.     2
 66.     1
-65.     1
-64.     1
-63.     1
-62.     1
+65.     2
+64.     2
+63.     2
+62.     2
 2017：  
-61.     1
-60.     1
-59.     1
-58.     1
-57.     1
-56.     1
-55.     1
-54.     1
-53.     1
-52.     1
-51.     1
+61.     2
+60.     2
+59.     2
+58.     2
+57.     2
+56.     2
+55.     2
+54.     2
+53.     2
+52.     2
+51.     2
 50.     1
-49.     1
+49.     2
 48.		2
 2016：  
 47.     2
@@ -156,6 +168,14 @@ Cellular Traffic:
 	traffic capacity and cell size, spectral efficiency and sectorization, 
 	traffic capacity versus coverage, and channel holding time analysis.
 
+Cellular network:
+	Mobile network.
+	A communication network where the last link is wireless
+
+SMS:
+	short message services
+	短信服务
+	
 云存储服务:
 	俗称网盘
 	国外代表性云存储服务包括Dropbox、One Drive、Google Drive、iCloud Drive、SugarSync、Ubuntu One
@@ -170,90 +190,220 @@ DevOps:
 	Development和Operations的组合词
 	是一组过程、方法与系统的统称，
 	用于促进开发（应用程序/软件工程）、技术运营和质量保障（QA）部门之间的沟通、协作与整合
+
+RPC:
+	Remote Procedure Call
+	远程过程调用
 	
+ISP:
+	Internet Service Provider
+	互联网服务提供商
 	
 2018：
 73.Pricing Data Tampering in Automated Fare Collection with NFC-equipped Smartphones
 价格数据篡改 自动收费站 NFC手机
-关联52
-
+关联52，51
+内容：
+	同52
+	
 71.Look-aside At Your Own Rist:Privacy Implications of DNSSEC Look-aside Validation
 旁观 个人风险 牵涉到的隐私 DNS安全扩展
-
+内容：
+	域名系统安全扩展（DNSSEC）利用公钥密码为DNS响应提供数据完整性、源身份验证和denial of existence
+	DNSSEC Look-aside Validation (DLV) is designed for alternative off-path validation
+	虽然DNS隐私引起了广泛的关注，但DLV的隐私影响并未得到充分的研究和理解。
+	在本文中，我们首先深入研究DLV，突出其宽松的规范和隐私的影响
+	我们发现大量不应该发送到DLV服务器的域正在被泄露
+	提出了两种方法来修复隐私泄漏
+	我们的方法需要对现有的DNS标准进行微小的修改，并且我们在延迟和通信方面证实了它们的cost
+	
 69.On the Synchronization Bottleneck of OpenStack Swift-Like Cloud Storage Systems
 OpenStack快速云存储系统同步瓶颈 
 关联42
+内容：
+	同42
+
 
 68.H2Cloud:Maintaining the Whole Filesystem in an Object Storage Cloud
 H2Cloud：在对象存储云中维护整个文件系统
+内容：
+	对象云没有目录结构，于是我们想用单独的一个云维护meta-data和directory structure
+	规避单独的索引云故障造成的meta-data loss
+	设计了一种新的数据结构：层次哈希（Hierarchical Hash H2）
+	设计了H2Cloud，可以在对象存储云中维护用户的文件系统，并支持快速的目录操作，
+	比OpenStack Swift快几个数量级，和Dropbox性能差不多，而且不需要单独的索引云
+	
+
 
 67.On the Effectiveness of Offset Projections for 360-Degree Video Streaming
 360度视频流 有效的偏移预测/投影
 关联55
+内容：
+	同55
+
 
 66.Profiling the Performance Anomalies of Multi-Source Media Downloading at Scale in the Wild
 野外多源媒体下载性能异常分析
-
+内容：
+	疑问：sweet spot是什么？
+	基于一个179M media给37M用户下载的文件的日志
+	23%的用户下载的慢于single source downloading
+	下载源数量和下载速度有点关系
+	提供了一些解决异常的implications
+	
 65.FBSleuth:Fake Base Station Forensics via Radio Frequency Fingerprinting
 通过射频指纹搞的伪基站取证
+内容：
+	设计了FBSleuth，一个利用射频指纹的FBS犯罪取证框架
+	这些指纹源于硬件制造的缺陷
+	根据射频信号的调制误差、瞬时频率和相位的微妙变化，对射频指纹进行建模
+	准确率99%
 	
 64.Mobile Content Hosting Infrastructure in China:A View from a Cellular ISP
 从Cellular ISP看中国移动内容托管基础设施
+内容：
+	疑问：ASes是什么
+	1.We find that cellular content infrastructure is concentrated in a few ISP ASes, rather than CDN ASes.
+	2.We propose a clustering algorithm for identifying hosting providers from passive DNS replies of massive domains.
+	提出了一个聚类算法，用来识别托管提供商
+	3.We reveal that while the examined ISP account for the largest amount of tracking queries, over 20% of the tracking queries are still mapped to foreign ASes. Besides, we surprisingly observe that as many as 60% of the tracking servers (i.e., servers used to deliver tracking content) and 52 ASes are exclusively used for tracking service.
+	
+
 
 63.Towards Web-based Delta Synchronization for Cloud Storage Services
 面向基于Web的增量同步 for 云存储服务
 关联56，54，31，29
+内容：
+	同56
 
 62.Enabling Efficient Cross-Cloud File Collaboration Based on Inefficient Web APIs
 用低效的Web API来实现云文件协作
-感觉关联多人在线编辑石墨文档
 关联53
+内容：
+	同53
 	
 	
 2017：
 61.Accessing Google Scholar under Extreme Internet Censorship:A Legal Avenue
 用合法途径 在一个严格的网络审查环境下 访问Google Scholar
-
+内容：
+	分析了VPN，Tor，Shadowsocks特征，
+	部署了一个新的解决方案ScholarCloud
+	以帮助中国学者以高效、简单、低成本访问Google Scholar
+	这项工作提供了内部人士对中国互联网审查的看法，并提供了与审查共存的法律途径
+	
+	
 60.Unveiling Performance of NFV Software Dataplanes
 揭幕性能  NFV(网络功能虚拟化)软件 数据平面
+内容：
+	The key technology of NFV is software dataplane
+	从packet proccessing throughput、latency两个指标研究性能
+	BESS and ClickOS两个开源NFV dataplane
+	发现：
+		处理小数据包有性能问题 <128B
+		It is not always the best to colocate all VMs of a service chain on one server due to NUMA effect. 
 
 59.An IoT Honeypot Device for Malware Forensics
 一个物联网蜜罐设备 为恶意软件取证用的
-
+内容：
+	面向物联网设备的恶意软件很猖狂
+	旧的蜜罐无法在恶意软件调查中提供足够的证据
+	腾讯开发了一种全新的物联网蜜罐，
+	用于物联网恶意软件取证
+	
 58.Resisting Tag Spam by Leveraging Implicit User Behaviors
 利用隐式用户行为 抵制带标签的垃圾邮件 
-
+内容：
+	标签系统容易被Tag Spam attack
+	大部分正确标记是由一些用户相似的标签组成的
+	提出一种新的服务SRaaS有效地防御异构垃圾标签攻击
+	At the heart of SRaaS is a novel reputation assessment protocol, 
+	whose design leverages the implicit similarity cliques coupled with 
+	the social networks inherent to typical tagging systems. 
+	
 57.Unbiased Sampling of Social Media Networks for Well-connected Subgraphs
 无偏抽样 社交媒体网络 连通子图
+内容：
+	This paper proposes a novel random-walk based algorithm 
+	which implements Unbiased Sampling using Dummy Edges (USDE)
+	使用推特和新浪微博数据验证效果良好
+	提高了sampling efficiency and quality
 
 56.Practical Web-based Delta Synchronization for Cloud Storage Services
 实用的 基于Web的增量同步 for 云存储服务
 关联63，54，31，29
-
+内容：
+	delta同步仅适用于客户端、移动应用程序，而不适用于Web浏览器
+	用JS为浏览器实现了一个传统的delta同步解决方案，
+	发现同步严重受到JS执行效率的影响
+	we reverse the traditional delta sync approach by lifting all chunk search and comparison operations from the client side into the server side
+	让服务器去计算同步需要的东西，而不是JS去计算
+	从而得到了解决方案WebR2sync+，能同时支持7300个客户端增量同步
+	
 55.A Measurement Study of Oculus 360 Degree Video Streaming
 一个测量评估的研究 关于眼环360度视频流
 关联67
+内容：
+	在本文中，我们回顾了360度视频编码的标准方法，并将它们与Oculus提出的一种新的、尚未出版的方法进行比较
+	比特率节省5.6%~16.4%
+	与理想下载策略比，这种二维流can cause over 57% extra segments to be downloaded 
+	wasting 20% of the total downloading bandwidth
+
+	
 
 54.DeltaCFS: Boosting Delta Sync for Cloud Storage Services by Learning from NFS
 增量云文件系统：通过NFS文件系统中学习 提高云存储服务的增量同步
 关联63，56，31，29
-
+内容：
+	提出DeltaCFS，一种文件同步框架
+	比Dropbox数据传输和计算开销小
+	
+	
 53.CoCloud: Enabling Efficient Cross-Cloud File Collaboration based on Inefficient Web APIs
 合作云：用低效的Web API来实现云文件协作
 关联62
+内容：
+	跨云文件写作唯一有效方法是WebAPI
+	但是WebAPI性能不稳定
+	对于每个云，我们总能部署一个或多个客户端代理，能有效访问API
+	文件写作期间，文件不同版本有显著相似形，可以被用来减少业务，缩短同步时间
+	设计了CoCloud，支持四种云存储服务之间文件协作，性能良好
 
 52.Large-Scale Invisible Attack on AFC Systems with NFC-Equipped Smartphones
 大规模不可见攻击 AFC自动收费站系统 有NFC设备的手机
-关联73
+关联73，51
+内容：
+	AFC大多是明文传输，不安全
+	但是AFC网络与公共网络是隔离的，运营商不需要过多关注问题
+	NFC的出现弥补了AFC网络和因特网的鸿沟
+	设计了一个攻击AFC的例子LessPay，使用户能支付比实际少的多的费用，成功率97.6%
+	攻击有2个特性：对AFC系统操作员不可见，维护AFC卡尺，扩展到大量用户
+	在带宽和计算方面开销也很低
 
 51.NFC-enabled Attack on Cyber Physical Systems: A Practical Case Study
 对一个物理电子网络系统的NFC攻击 一个实际案例的研究
+关联73，52
+内容：
+	AFC：Automated Fare Collection自动售票站
+	基于NFC的AFC被认为安全，因为通信距离只有10cm
+	NFC手机越来越普及
+	介绍并实现了一种对AFC卡的攻击，允许攻击者加满智能卡，获得退款
+	提出可能的对策抵御这些攻击
 
 50.Montage: Combine Frames with Movement Continuity for Realtime Multi-User Tracking
 镜头组接：将帧 与连续动作结合 实时多用户跟踪
+内容：
+	用户追踪相关……
+	没看懂……有点难
+
 
 49.FBS-Radar: Uncovering Fake Base Stations at Scale in the Wild
 FBS雷达：发现大量野外的伪基站
+内容：
+	提出一种FBS雷达的设计、部署、检测
+	使用100M用户众包数据
+	提出一种新方法能准确定位FBS
+	抓了几百FBS operators
 
 48.Towards a Full-Stack DevOps Environment(Platform-as-a-Service) for Cloud-Hosted Applications
 面向云托管应用的全站DevOop环境（PaaS）
