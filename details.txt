@@ -1,0 +1,79 @@
+·对基于NFC的AFC进行攻击：51，52，73
+
+1.AFC系统的全称是Automatic Fare Collection System，即城市轨道交通自动售检票系统
+2.POS（Pointofsales）的中文意思是“销售点”。POS是一种多功能终端，把它安装在信用卡的特约商户和受理网点中与计算机联成网络，就能实现电子资金自动转账，它具有支持消费、预授权、余额查询和转帐等功能，使用起来安全、快捷、可靠。大宗交易中基本经营情报难以获取，导入POS系统主要是解决零售业信息管理盲点。连锁分店管理信息系统中的重要组成部分。
+3.
+疑问：
+1.为什么说一开始AFC网络和公共网络隔离？AFC网络是什么样的网络？
+
+内容：
+analyze the weakness of ISO/IEC 14443-4 when facing a relay attack.
+使用relay attack 能get refund
+尝试攻击其他国家的AFC
+解决relay attack的方法：1.不给refund 2.检测relay attack
+可以保护entrance data
+可以用二维码替代AFC卡
+
+实现了LessPay APP
+
+
+
+·社交网络sampling：57
+问题：
+	degree大的更容易被选
+	degree小的不容易被选
+已知方法：
+	方法1：
+		随机跳，把degree大的跳概率调低，degree小的调高
+		缺点：最后会选很多孤立点或孤立子图
+	方法2：
+		rejecting to move to high-degree nodes but
+		sampling low-degree nodes many times (called self-sampling
+		here)
+		缺点：self-sampling probability of low degree nodes is very high
+	提出USDE算法：UNBIASED SAMPLING WITH DUMMY EDGES 即带虚边的无偏采样
+	该算法基于MHRW采样算法
+	
+	如果目前在节点i，
+		那么如何加虚边呢？
+		候选节点是，对于j，若visit[j]=1，
+		则j的相邻non-zero self-sampling probabilities节点即为候选点
+	疑问：
+	1.什么是self-sampling?
+
+·H2Cloud：68
+	用哈希把目录哈希成前缀，存文件
+	
+·增量同步：63，56，54，31，29
+问题：
+	DropBox性能本来挺好的，但是短时间多次小update会导致烧流量烧CPU的问题
+	解决方案：
+		做一个中间件UDS，不要每次小update都更新，攒起来再更新
+		但是UDS占额外存储空间，而且如果文件大小大，CPU占用也大
+		UDS用了inotify、rsync
+		现在实现一个inotify+，去掉rsync，结果变得很好
+
+	云盘同步太烧流量：
+		1.创建多个小文件，可以利用batched data sync把小文件合成大文件发送
+		2.文件修改：增量同步（IDS），使用中间件实现
+		3.压缩文件
+		4.去重
+		5.合并高频小修改
+		6.用户端硬件差能有好效果
+		
+	数据同步系统有高网络流量或高计算开销，以及数据损坏
+		第一个挑战是如何实现高网络效率和低CPU开销。我们的解决方案是自适应地应用不同的数据同步模式，用于不同的文件更新模式：就地更新和事务更新in-place update and transactional update
+		design backindex to maintain causal consistency
+		使用同步队列来保证一致性，并在校验和存储中维护文件块的校验和以检测损坏的数据
+		
+	没有基于Web的DeltaSync：
+		实现基于web的DeltaSync，把计算从Web端转移到服务器端
+		Replacing MD5 with SipHash in Chunk Comparison
+
+·用哈希改进OpenStack Swift同步协议，实现LightSync：42，69
+
+	我们使用HoH来减少消息大小，使用CHC来减少交换的消息数量
+	数据一致性占用太多CPU，是O(n^2)的
+	设计了循环哈希验证CHC，变成O(n)
+	
+	

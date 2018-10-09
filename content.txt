@@ -1,23 +1,39 @@
-进度等级划分：
-	读了标题：		1
-	读了概要：		2
-	大致通读：		3
-	通读理解：		4
-	融会贯通：		5
+每周五晚上九点前，交周报
 
-下一步精读：
+
+
+1.行业现状、问题发现、探索解决、撰写论文，论文的story
+2.javascript V8引擎
+3.论文查重算法方向
+4.组会，周报
+
+
+
+
+
+目前有感觉的论文：
+Sampling 社交网络：57
+手机磁传感器检测门：36
+H2Cloud，哈希目录做前缀存文件目录：68
+对基于NFC的AFC进行攻击：51，52，73
+增量同步相关：63，56，54，31，29
+用哈希改进OpenStack Swift同步协议，实现LightSync：42，69
+
+
+
+再读：
 	不同网盘的同步策略和问题：25
 	视频重复率计算：34
 	调光省电算法：35，44，47
-	手机检测磁性门：36
+	手机磁传感器检测门：36
 	用哈希改进OpenStack Swift同步协议，实现LightSync：42，69
 	降低CDN尾部延时的算法：43
-	DevOps(Paas)的本质、现状和前景：48
+	DevOps(Paas)的本质、现状和前景：48（论文打不开）
 	Montage用户追踪算法：50（有点难……）
 	对基于NFC的AFC进行攻击：51，52，73
 	跨云协作：53
 	360度视频流：55，67
-	增量同步相关：64，56，54，31，29 其中56是JS实现
+	增量同步相关：63，56，54，31，29
 	社交网络数据采样算法：57
 	抵抗垃圾标签：58
 	软件物联网蜜罐：59
@@ -26,31 +42,38 @@
 	H2Cloud目录结构的对象云存储，H2哈希：68
 	
 	
+进度等级划分：
+	读标题：		1
+	读概要：		2
+	内容浏览：		3
+	文章理解：		4
+	融会贯通：		5
+
 	
 文献进度：
 2018：
-73.		2
-71.     1
-69.     1
-68.     1
+73.		3
+71.     2
+69.     2
+68.     3
 67.     2
-66.     1
+66.     2
 65.     2
 64.     2
-63.     2
+63.     3
 62.     2
 2017：  
 61.     2
 60.     2
 59.     2
 58.     2
-57.     2
-56.     2
+57.     3
+56.     3
 55.     2
-54.     2
+54.     3
 53.     2
-52.     2
-51.     2
+52.     3
+51.     3
 50.     1
 49.     2
 48.		2
@@ -60,23 +83,23 @@
 45.     2
 44.     2
 43.     2
-42.     2
+42.     3
 41.     2
 2015：  
 40.     2
 39.     2
 38.     2
 37.     2
-36.     2
+36.     3
 35.     2
 34.     2
 33.     2
 2014：  
 32.     2
-31.		2
+31.		3
 30.		4
 2013：
-29.     2
+29.     3
 28.     2
 27.     2
 25.     2
@@ -117,11 +140,6 @@ OpenStack:
 基站：
 	公用移动通信基站，是指在一定的无线电覆盖区中，通过移动通信交换中心，与移动电话终端之间进行信息传递的无线电收发信电台
 
-DeltaSync：
-
-ISP:
-
-H2:
 
 NFV:
 	Network Function Virtualization
@@ -198,6 +216,12 @@ RPC:
 ISP:
 	Internet Service Provider
 	互联网服务提供商
+
+对象存储服务：
+	主要面向非结构化数据，存储它们
+
+strace:
+	一个追踪系统调用的工具
 	
 2018：
 73.Pricing Data Tampering in Automated Fare Collection with NFC-equipped Smartphones
@@ -221,8 +245,9 @@ ISP:
 OpenStack快速云存储系统同步瓶颈 
 关联42
 内容：
-	同42
-
+	HoH
+	CHC 
+	我们使用HoH来减少消息大小，使用CHC来减少交换的消息数量
 
 68.H2Cloud:Maintaining the Whole Filesystem in an Object Storage Cloud
 H2Cloud：在对象存储云中维护整个文件系统
@@ -274,13 +299,13 @@ H2Cloud：在对象存储云中维护整个文件系统
 面向基于Web的增量同步 for 云存储服务
 关联56，54，31，29
 内容：
-	同56
+	类同56
 
 62.Enabling Efficient Cross-Cloud File Collaboration Based on Inefficient Web APIs
 用低效的Web API来实现云文件协作
 关联53
 内容：
-	同53
+	类同53
 	
 	
 2017：
@@ -338,6 +363,7 @@ H2Cloud：在对象存储云中维护整个文件系统
 	发现同步严重受到JS执行效率的影响
 	we reverse the traditional delta sync approach by lifting all chunk search and comparison operations from the client side into the server side
 	让服务器去计算同步需要的东西，而不是JS去计算
+	再使用SipHash替代MD5
 	从而得到了解决方案WebR2sync+，能同时支持7300个客户端增量同步
 	
 55.A Measurement Study of Oculus 360 Degree Video Streaming
@@ -512,11 +538,11 @@ OpenStack快速云存储系统同步瓶颈
 	结论：双子云很好，但也有优化余地
 
 36.LMDD: Light-weight Magnetic-based Door Detection with Your Smartphone
-轻量级 磁性门监测 智能手机
+轻量级 通过磁力变化监测门 智能手机
 内容：
 	门是室内定位的重要标志，检测门很重要，
 	最先进的方案是用CV或基础设施，但是太难了，设备管理成本高
-	提出仅依赖智能手机内置传感器信息的轻量级磁门检测方法LMDD
+	提出仅依赖智能手机内置磁传感器信息的轻量级门检测方法LMDD
 	原理是分析磁信号的变化来检测门，
 	实现后平均准确率74%
 
